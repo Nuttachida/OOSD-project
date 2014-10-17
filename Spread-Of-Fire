@@ -1,0 +1,73 @@
+public class test3 {
+  
+  public static void main(String[] args) {
+    
+    int[][] area = new int[11][11];
+    int fire = 0;
+    int prob = 9;
+    int top;
+    int bot;
+    int left;
+    int right;
+    int sec = 1;
+    
+    System.out.println("Simulate the forest first");
+    for(int i = 0; i < area.length; i++) {
+      for(int j = 0; j < area[i].length; j++) {
+        if( i == 0 || j == 0 || i == area.length-1 || j == area[i].length-1) {
+          System.out.print(area[i][j] + "   ");
+        }
+        else if (i == area.length/2 && j == area[i].length /2) {
+          area[i][j] = 2;
+          fire++;
+          System.out.print(area[i][j] + "   ");
+        }
+        else{
+          area[i][j] = 1;
+          System.out.print(area[i][j] + "   ");
+        }
+      }
+      System.out.println();
+    }
+    System.out.println();
+    
+    while(fire > 0) {
+      System.out.println("round " + sec);
+      fire = 0;
+      for(int i = 0; i < area.length; i++) {
+        for(int j = 0; j < area[i].length; j++) {
+          top = (int)(Math.random()*10+1);
+          bot = (int)(Math.random()*10+1);
+          left = (int)(Math.random()*10+1);
+          right = (int)(Math.random()*10+1);
+          if(area[i][j] == 2) {
+            if(area[i-1][j] == 1 && top < prob) {
+              area[i-1][j] = 2;
+              fire++;
+            }
+            if(area[i][j-1] == 1 && left < prob) {
+              area[i][j-1] = 2;
+              fire++;
+            }
+            if(area[i+1][j] == 1 && bot < prob) {
+              area[i+1][j] = 2;
+              fire++;
+            }
+            if(area[i][j+1] == 1 && right < prob) {
+              area[i][j+1] = 2;
+              fire++;
+            }
+            area[i][j] = 0;
+          }
+          System.out.print(area[i][j] + "   ");
+        }
+        System.out.println();
+      }
+      System.out.println();
+      sec++;
+    }
+    
+    
+    
+  }
+}
