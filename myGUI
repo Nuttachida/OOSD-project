@@ -1,0 +1,138 @@
+
+
+package com.java.gui;
+
+public class NewJFrame extends javax.swing.JFrame {
+
+    /**
+     * Creates new form NewJFrame
+     */
+    public NewJFrame() {
+        initComponents();
+    }
+
+   
+    @SuppressWarnings("unchecked")
+                      
+    private void initComponents() {
+
+        startBtn = new javax.swing.JButton();
+        stopBtn = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        menuBar = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        menu1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        help1 = new javax.swing.JMenuItem();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
+
+        startBtn.setText("Start");
+        startBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(startBtn);
+        startBtn.setBounds(320, 20, 70, 23);
+
+        stopBtn.setText("Stop");
+        stopBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stopBtnActionPerformed(evt);
+            }
+        });
+        getContentPane().add(stopBtn);
+        stopBtn.setBounds(320, 60, 70, 23);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(20, 20, 260, 200);
+
+        jMenu1.setText("New");
+
+        menu1.setText("menu1");
+        menu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menu1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(menu1);
+
+        menuBar.add(jMenu1);
+
+        jMenu2.setText("Help");
+
+        help1.setText("help1");
+        jMenu2.add(help1);
+
+        menuBar.add(jMenu2);
+
+        setJMenuBar(menuBar);
+
+        pack();
+    }                       
+
+    private void startBtnActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        
+    }                                        
+
+    private void stopBtnActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        
+    }                                       
+
+    private void menu1ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        
+    }                                     
+
+   
+    public static void main(String args[]) {
+        
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(NewJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        
+
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new NewJFrame().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JMenuItem help1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JMenuItem menu1;
+    private javax.swing.JMenuBar menuBar;
+    private javax.swing.JButton startBtn;
+    private javax.swing.JButton stopBtn;
+    // End of variables declaration                   
+}
