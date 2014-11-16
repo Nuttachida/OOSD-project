@@ -1,12 +1,18 @@
 public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, "                                                      Introduction for the word in program \n"
+                JOptionPane.showMessageDialog(null, "                                                               Introduction for the word in program \n"
                                                   + "'ProbCatch' : Probability of tree that fire can spread to the N/S/E/W side of tree (Probability between 0-1) \n"
                                                   + "'ProbTree' : Probability of tree that grow on the field (Probability between 0-1) \n"
                                                   + "'ProbBurn' : Probability of fire that start on the first time spreading in the field(Probability between 0-1) \n\n"
-                                                  + "                                                                5 Steps to use the program \n"
+                                                  + "                                                       5 Steps to use the program (Automatic mode) \n"
                                                   + "1. Set ProbCatch, Probtree, and ProbBurn \n"
                                                   + "2. Press 'Set' will show you how about the field in the first time. \n"
-                                                  + "3. Press 'Start' and the simulator will show you about your field. \n"
+                                                  + "3. Press 'Start' and the simulator will show you how fire spread on the field. \n"
+                                                  + "4. After simulation stop, Press 'Stop' to stop the program. \n"
+                                                  + "5. If you want to simulate again, Press 'Reset' to clear your field first. Otherwise, you can't simulate it again. \n\n"
+                                                  + "                                                     5 Steps to use the program (Step by step mode) \n"
+                                                  + "1. Set ProbCatch, Probtree, and ProbBurn \n"
+                                                  + "2. Press 'Set' will show you how about the field in the first time. \n"
+                                                  + "3. Press 'Step' and the simulator will show you how fire spread on the field 'step by step'. \n"
                                                   + "4. After simulation stop, Press 'Stop' to stop the program. \n"
                                                   + "5. If you want to simulate again, Press 'Reset' to clear your field first. Otherwise, you can't simulate it again.");
-}
+            }
