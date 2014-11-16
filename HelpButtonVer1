@@ -8,5 +8,5 @@ public void actionPerformed(ActionEvent e) {
                                                   + "2. Press 'Set' will show you how about the field in the first time. \n"
                                                   + "3. Press 'Start' and the simulator will show you about your field. \n"
                                                   + "4. After simulation stop, Press 'Stop' to stop the program. \n"
-                                                  + "5. If you want to simalate again, Press 'Reset' to clear your field first. Otherwise, you can't simulate it again.");
+                                                  + "5. If you want to simulate again, Press 'Reset' to clear your field first. Otherwise, you can't simulate it again.");
 }
