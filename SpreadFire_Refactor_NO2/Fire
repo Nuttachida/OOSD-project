@@ -122,7 +122,9 @@ public class Fire {
         delay = 500;
     }
     
+    // Method for stop GUI
     public void stop() {
+        
         noTwo = true;
     }
 
